@@ -15,11 +15,14 @@ body {
 }
 
 .screen {
-    display: none;
+    display: none !important;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .screen.active {
-    display: block;
+    display: block !important;
+    opacity: 1;
 }
 
 .buttons {
@@ -49,9 +52,59 @@ img {
     height: auto;
 }
 
+#complete-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+#complete-gif {
+  max-width: 300px;
+  margin: 20px auto 30px;
+  display: block;
+  width: 100%;
+}
+
 #home-btn {
-    margin-top: 20px;
-    z-index: 10;
+  margin-top: 20px;
+  z-index: 10;
+  width: 200px;
+  background-color:#007bff;
+}
+
+#exercise-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+  max-width: 600px;
+  margin: 0 auto 20px;
+  width: 100%;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+#exercise-list li {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 14px 20px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+#exercise-list li:hover {
+  background: #e9ecef;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#exercise-list li:active {
+  transform: translateY(0);
 }
 
 .congrats-text {
