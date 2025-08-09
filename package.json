@@ -1,0 +1,26 @@
+{
+  "name": "workoutapp",
+  "version": "1.0.0",
+  "description": "An exercise app designed to help people perform exercises at home of any age.\r If you have a pair of dumbbells, you're all set! (Note: it would help if you could afford to buy a bench to workout.)",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zzidd/WorkoutApp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zzidd/WorkoutApp/issues"
+  },
+  "homepage": "https://github.com/zzidd/WorkoutApp#readme",
+  "dependencies": {
+    "@capacitor/android": "^7.4.2",
+    "@capacitor/cli": "^7.4.2",
+    "@capacitor/core": "^7.4.2",
+    "@capacitor/ios": "^7.4.2"
+  }
+}

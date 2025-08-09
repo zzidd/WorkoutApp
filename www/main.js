@@ -68,27 +68,27 @@ function showExerciseList(bodyPart) {
 
 const exerciseData = {
   bicep: [
-    { name: 'Bicep Curl', gif: 'gifs/bicep-curl.gif' },
-    { name: 'Bicep Incline Curl', gif : 'gifs/bicep-incline.gif'},
-    { name: 'Preacher Hammer Curl', gif: 'gifs/preacher-hammer-curl.gif' },
-    {name : 'Concentrated Bicep Curl', gif: 'gifs/concentration_curls_dumbbell.gif'}
+    { name: 'Bicep Curl', gif: '../gifs/bicep-curl.gif' },
+    { name: 'Bicep Incline Curl', gif : '../gifs/bicep-incline.gif'},
+    { name: 'Preacher Hammer Curl', gif: '../gifs/preacher-hammer-curl.gif' },
+    {name : 'Concentrated Bicep Curl', gif: '../gifs/concentration_curls_dumbbell.gif'}
   ],
   tricep: [
-    { name: 'One Arm Tricep Extension', gif: 'gifs/one-arm-tricep-extension.gif' },
-    { name: 'Standing Tricep Kickback', gif: 'gifs/tricep-kick-back-tricep.gif' },
-    {name: 'Bent-Tricep Kickback', gif: 'gifs/Dumbbell-Kickback.gif'},
-    {name : 'Dumbbell Skull Crusher', gif: 'gifs/skull-crusher-dumbbell.gif'}
+    { name: 'One Arm Tricep Extension', gif: '../gifs/one-arm-tricep-extension.gif' },
+    { name: 'Standing Tricep Kickback', gif: '../gifs/tricep-kick-back-tricep.gif' },
+    {name: 'Bent-Tricep Kickback', gif: '../gifs/Dumbbell-Kickback.gif'},
+    {name : 'Dumbbell Skull Crusher', gif: '../gifs/skull-crusher-dumbbell.gif'}
   ],
   back: [
-    { name: 'Chest Supported Dumbbell Rows', gif: 'gifs/Chest-Supported-Dumbbell-Rows.gif' },
-    { name: 'Bent Over Lateral Raise', gif: 'gifs/bent-over-lateral-raise.gif' },
-    {name : 'Rowing', gif: 'gifs/rowing.gif'}
+    { name: 'Chest Supported Dumbbell Rows', gif: '../gifs/Chest-Supported-Dumbbell-Rows.gif' },
+    { name: 'Bent Over Lateral Raise', gif: '../gifs/bent-over-lateral-raise.gif' },
+    {name : 'Rowing', gif: '../gifs/rowing.gif'}
   ],
   shoulder: [
-    { name: 'Shoulder Press', gif: 'gifs/shoulder-press-seated.gif' },
-    { name: 'Lateral Raise', gif: 'gifs/DB_LAT_RAISE.gif' },
-    {name: 'Inclined One Arm Raise', gif : 'gifs/incline-leaned-one-arm-raise.gif'},
-    {name : 'Front Raise', gif: 'gifs/front-raise.gif'}
+    { name: 'Shoulder Press', gif: '../gifs/shoulder-press-seated.gif' },
+    { name: 'Lateral Raise', gif: '../gifs/DB_LAT_RAISE.gif' },
+    {name: 'Inclined One Arm Raise', gif : '../gifs/incline-leaned-one-arm-raise.gif'},
+    {name : 'Front Raise', gif: '../gifs/front-raise.gif'}
   ],
 };
 
@@ -185,7 +185,7 @@ document.getElementById('home-btn').addEventListener('click', () => {
 });
 
 function celebrateCompletion() {
-  document.getElementById('complete-gif').src = 'gifs/dance.gif';
+  document.getElementById('complete-gif').src = '../gifs/dance.gif';
   showScreen('complete');
   const audio = document.getElementById('celebration-audio');
   if (audio) {
