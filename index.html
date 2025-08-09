@@ -4,20 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Workout App</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico.png">
+    <link rel="icon" type="image/x-icon" href="icons/favicon.ico.png">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!--<h1>Let's Workout!</h1> -->
     <div id="app">
-        <!-- Body Part Selection -->
-        <section id="body-part-screen" class="screen active">
-            <h1>Select Body Class</h1>
-            <div class="buttons">
-                <button class="body-part" data-part="bicep">Bicep</button>
-                <button class="body-part" data-part="tricep">Tricep</button>
-                <button class="body-part" data-part="back">Back</button>
-                <button class="body-part" data-part="shoulder">Shoulder</button>
+        <!-- Theme Toggle -->
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light mode">
+            <span class="light-icon">☀️</span>
+            <span class="dark-icon">🌙</span>
+        </button>
+
+        <!-- Home Screen -->
+        <section id="home-screen" class="screen active">
+            <h1 class="main-heading">Our Body is a Temple</h1>
+            <p class="sub-heading">Select a muscle group to begin</p>
+            
+            <div class="body-parts-grid">
+                <div class="body-card" data-part="bicep">
+                    <div class="icon">💪</div>
+                    <h3>Biceps</h3>
+                </div>
+                <div class="body-card" data-part="tricep">
+                    <div class="icon">💪</div>
+                    <h3>Triceps</h3>
+                </div>
+                <div class="body-card" data-part="back">
+                    <div class="icon">🏋️</div>
+                    <h3>Back</h3>
+                </div>
+                <div class="body-card" data-part="shoulder">
+                    <div class="icon"><img src="icons/shoulder.jpg" alt="shoulders"></div>
+                    <h3>Shoulders</h3>
+                </div>
             </div>
         </section>
 

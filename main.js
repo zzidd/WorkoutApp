@@ -1,11 +1,70 @@
 // Workout App Logic
 const screens = {
-  bodyPart: document.getElementById('body-part-screen'),
+  home: document.getElementById('home-screen'),
   exerciseList: document.getElementById('exercise-list-screen'),
   exerciseDetail: document.getElementById('exercise-detail-screen'),
   rest: document.getElementById('rest-screen'),
   complete: document.getElementById('complete-screen'),
 };
+
+// Theme Toggle
+const themeToggle = document.getElementById('theme-toggle');
+const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+const currentTheme = localStorage.getItem('theme');
+
+// Set initial theme
+if (currentTheme === 'dark' || (!currentTheme && prefersDarkScheme.matches)) {
+  document.documentElement.setAttribute('data-theme', 'dark');
+}
+
+// Toggle theme
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    document.documentElement.setAttribute('data-theme', isDark ? 'light' : 'dark');
+    localStorage.setItem('theme', isDark ? 'light' : 'dark');
+  });
+}
+
+// Body part selection from home screen
+document.querySelectorAll('.body-card').forEach(card => {
+  card.addEventListener('click', () => {
+    const bodyPart = card.getAttribute('data-part');
+    showExerciseList(bodyPart);
+  });
+});
+
+// Show exercise list for selected body part
+function showExerciseList(bodyPart) {
+  const exerciseList = document.getElementById('exercise-list');
+  const title = document.getElementById('exercise-list-title');
+  
+  // Set global variables for exercise tracking
+  selectedExercises = [...exerciseData[bodyPart]];
+  currentExerciseIdx = 0;
+  
+  // Capitalize first letter for the title
+  title.textContent = `${bodyPart.charAt(0).toUpperCase() + bodyPart.slice(1)} Exercises`;
+  
+  // Clear previous exercises
+  exerciseList.innerHTML = '';
+  
+  // Add exercises to the list
+  selectedExercises.forEach((exercise, index) => {
+    const li = document.createElement('li');
+    li.textContent = exercise.name;
+    li.style.cursor = 'pointer';
+    li.addEventListener('click', (e) => {
+      e.stopPropagation();
+      currentExerciseIdx = index;
+      startExercise();
+    });
+    exerciseList.appendChild(li);
+  });
+  
+  // Show the exercise list screen
+  showScreen('exerciseList');
+}
 
 const exerciseData = {
   bicep: [
@@ -117,17 +176,13 @@ document.getElementById('add-30s').addEventListener('click', () => {
 });
 
 document.getElementById('back-to-body-parts').addEventListener('click', () => {
-  showScreen('bodyPart');
+  showScreen('home');
 });
 
-// Home button on completion screen
-const homeBtn = document.getElementById('home-btn');
-if (homeBtn) {
-  homeBtn?.addEventListener('click', () => {
-    stopCelebration();
-    showScreen('bodyPart');
-  });
-}
+document.getElementById('home-btn').addEventListener('click', () => {
+  stopCelebration();
+  showScreen('home');
+});
 
 function celebrateCompletion() {
   document.getElementById('complete-gif').src = 'gifs/dance.gif';
