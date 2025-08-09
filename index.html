@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!--<h1>Let's Workout!</h1? -->
+    <div id="app">
+        <!-- Body Part Selection -->
+        <section id="body-part-screen" class="screen active">
+            <h1>Select Body Class</h1>
+            <div class="buttons">
+                <button class="body-part" data-part="bicep">Bicep</button>
+                <button class="body-part" data-part="tricep">Tricep</button>
+                <button class="body-part" data-part="back">Back</button>
+                <button class="body-part" data-part="shoulder">Shoulder</button>
+            </div>
+        </section>
+
+        <!-- Exercises List Screen -->
+        <section id="exercise-list-screen" class="screen">
+            <h1 id="exercise-list-title"></h1>
+            <ul id="exercise-list"></ul>
+            <button id="back-to-body-parts" class="secondary">Back</button>
+        </section>
+
+        <!-- Exercise Detail Screen -->
+        <section id="exercise-detail-screen" class="screen">
+            <h1 id="exercise-name"></h1>
+            <img id="exercise-gif" alt="exercise gif" />
+            <button id="next-exercise">Next</button>
+        </section>
+
+        <!-- Rest Screen -->
+        <section id="rest-screen" class="screen">
+            <h1>Rest</h1>
+            <div id="rest-timer">60</div>
+            <div class="buttons">
+                <button id="skip-rest" class="secondary">Skip</button>
+                <button id="add-30s">+30s</button>
+            </div>
+        </section>
+        <!-- Completion Screen -->
+        <section id="complete-screen" class="screen">
+            <h1 class="congrats-text">Congratulations!</h1>
+            <img id="complete-gif" alt="celebration gif" />
+            <audio id="celebration-audio" src="audios/applause-sound-effect.mp4"></audio>
+            <button id="home-btn" class="secondary">Home</button>
+        </section>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
