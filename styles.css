@@ -238,10 +238,12 @@ img {
 }
 
 #complete-gif {
-  max-width: 300px;
+  max-width: 250px;
+  height: auto;
   margin: 20px auto 30px;
   display: block;
-  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 #home-btn {
@@ -264,20 +266,21 @@ img {
 }
 
 #exercise-list li {
-  background: #f8f9fa;
-  border: 1px solid #dee2e6;
+  background: var(--card-bg);
+  color: var(--text-color);
+  border: 1px solid var(--card-hover);
   border-radius: 8px;
   padding: 14px 20px;
   font-size: 1.1rem;
   cursor: pointer;
   transition: all 0.2s ease;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  box-shadow: var(--shadow);
 }
 
 #exercise-list li:hover {
-  background: #e9ecef;
+  background: var(--card-hover);
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 #exercise-list li:active {
