@@ -75,6 +75,7 @@ const exerciseData = {
   ],
   back: [
     { name: 'Chest Supported Dumbbell Rows', gif: './resources/gifs/Chest-Supported-Dumbbell-Rows.gif' },
+    {name: 'Single arm Dumbbell Row', gif: './resources/gifs/Single-arm-dumbbell-row.gif'},
     { name: 'Bent Over Lateral Raise', gif: './resources/gifs/bent-over-lateral-raise.gif' },
     {name : 'Rowing', gif: './resources/gifs/rowing.gif'}
   ],
