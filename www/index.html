@@ -7,7 +7,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <title>Workout App</title>
-    <link rel="icon" type="image/x-icon" href="resources/icons/favicon.ico.png">
+    <link rel="icon" type="image/x-icon" href="./resources/icons/favicon.ico.png">
     <link rel="stylesheet" href="styles.css">
     
 </head>
@@ -37,7 +37,7 @@
                     <h3>Back</h3>
                 </div>
                 <div class="body-card" data-part="shoulder">
-                    <div class="icon"><img src="resources/icons/shoulder.jpg" alt="shoulders"></div>
+                    <div class="icon"><img src="./resources/icons/shoulder.jpg" alt="shoulders"></div>
                     <h3>Shoulders</h3>
                 </div>
             </div>
@@ -53,7 +53,7 @@
         <!-- Exercise Detail Screen -->
         <section id="exercise-detail-screen" class="screen">
             <h1 id="exercise-name"></h1>
-            <img id="exercise-gif" alt="exercise gif" />
+            <img id="exercise-gif" alt="exercise gif" src="" />
             <button id="next-exercise">Next</button>
         </section>
 
@@ -69,12 +69,12 @@
         <!-- Completion Screen -->
         <section id="complete-screen" class="screen">
             <h1 class="congrats-text">Congratulations!</h1>
-            <img id="complete-gif" alt="celebration gif" />
-            <audio id="celebration-audio" src="resources/audios/applause-sound-effect.mp3"></audio>
+            <img id="complete-gif" alt="celebration gif" src="" />
+            <audio id="celebration-audio" src="./resources/audios/applause-sound-effect.mp3"></audio>
             <button id="home-btn" class="secondary">Home</button>
         </section>
     </div>
 
-    <script src="main.js"></script>
+    <script src="main.js" defer></script>
 </body>
 </html>

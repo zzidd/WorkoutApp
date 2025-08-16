@@ -62,27 +62,27 @@ function showExerciseList(bodyPart) {
 
 const exerciseData = {
   bicep: [
-    { name: 'Bicep Curl', gif: 'resources/gifs/bicep-curl.gif' },
-    { name: 'Bicep Incline Curl', gif : 'resources/gifs/bicep-incline.gif'},
-    { name: 'Preacher Hammer Curl', gif: 'resources/gifs/preacher-hammer-curl.gif' },
-    {name : 'Concentrated Bicep Curl', gif: 'resources/gifs/concentration_curls_dumbbell.gif'}
+    { name: 'Bicep Curl', gif: './resources/gifs/bicep-curl.gif' },
+    { name: 'Bicep Incline Curl', gif: './resources/gifs/bicep-incline.gif'},
+    { name: 'Preacher Hammer Curl', gif: './resources/gifs/preacher-hammer-curl.gif' },
+    {name : 'Concentrated Bicep Curl', gif: './resources/gifs/concentration_curls_dumbbell.gif'}
   ],
   tricep: [
-    { name: 'One Arm Tricep Extension', gif: 'resources/gifs/one-arm-tricep-extension.gif' },
-    { name: 'Standing Tricep Kickback', gif: 'resources/gifs/tricep-kick-back-tricep.gif' },
-    {name: 'Bent-Tricep Kickback', gif: 'resources/gifs/Dumbbell-Kickback.gif'},
-    {name : 'Dumbbell Skull Crusher', gif: 'resources/gifs/skull-crusher-dumbbell.gif'}
+    { name: 'One Arm Tricep Extension', gif: './resources/gifs/one-arm-tricep-extension.gif' },
+    { name: 'Standing Tricep Kickback', gif: './resources/gifs/tricep-kick-back-tricep.gif' },
+    {name: 'Bent-Tricep Kickback', gif: './resources/gifs/Dumbbell-Kickback.gif'},
+    {name : 'Dumbbell Skull Crusher', gif: './resources/gifs/skull-crusher-dumbbell.gif'}
   ],
   back: [
-    { name: 'Chest Supported Dumbbell Rows', gif: 'resources/gifs/Chest-Supported-Dumbbell-Rows.gif' },
-    { name: 'Bent Over Lateral Raise', gif: 'resources/gifs/bent-over-lateral-raise.gif' },
-    {name : 'Rowing', gif: 'resources/gifs/rowing.gif'}
+    { name: 'Chest Supported Dumbbell Rows', gif: './resources/gifs/Chest-Supported-Dumbbell-Rows.gif' },
+    { name: 'Bent Over Lateral Raise', gif: './resources/gifs/bent-over-lateral-raise.gif' },
+    {name : 'Rowing', gif: './resources/gifs/rowing.gif'}
   ],
   shoulder: [
-    { name: 'Shoulder Press', gif: 'resources/gifs/shoulder-press-seated.gif' },
-    { name: 'Lateral Raise', gif: 'resources/gifs/DB_LAT_RAISE.gif' },
-    {name: 'Inclined One Arm Raise', gif: 'resources/gifs/incline-leaned-one-arm-raise.gif'},
-    {name : 'Front Raise', gif: 'resources/gifs/front-raise.gif'}
+    { name: 'Shoulder Press', gif: './resources/gifs/shoulder-press-seated.gif' },
+    { name: 'Lateral Raise', gif: './resources/gifs/DB_LAT_RAISE.gif' },
+    {name: 'Inclined One Arm Raise', gif: './resources/gifs/incline-leaned-one-arm-raise.gif'},
+    {name : 'Front Raise', gif: './resources/gifs/front-raise.gif'}
   ],
 };
 
