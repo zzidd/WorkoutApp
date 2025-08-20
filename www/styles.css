@@ -313,3 +313,44 @@ img {
     padding: 12px 24px;
     font-size: 1.1rem;
 }
+
+/* Exercise Controls */
+.exercise-controls {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 320px;
+    margin: 20px auto 0;
+    gap: 15px;
+}
+
+#mute-button, #next-exercise {
+    flex: 1;
+    min-width: 0;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 0 15px;
+    margin: 0;
+    font-size: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#mute-button {
+    background: #6c757d;
+}
+
+#mute-button.muted {
+    background: #dc3545;
+}
+
+#next-exercise {
+    background: #007bff;
+}

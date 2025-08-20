@@ -9,6 +9,7 @@ const screens = {
 const themeToggle = document.getElementById('theme-toggle');
 const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
 const currentTheme = localStorage.getItem('theme');
+let isMuted = false;
 
 if (currentTheme === 'dark' || (!currentTheme && prefersDarkScheme.matches)) {
   document.documentElement.setAttribute('data-theme', 'dark');
@@ -20,6 +21,35 @@ if (themeToggle) {
     document.documentElement.setAttribute('data-theme', isDark ? 'light' : 'dark');
     localStorage.setItem('theme', isDark ? 'light' : 'dark');
   });
+}
+
+const muteButton = document.getElementById('mute-button');
+
+muteButton.addEventListener('click', toggleMute);
+
+function toggleMute() {
+  isMuted = !isMuted;
+  
+  if (isMuted) {
+    // If muting, stop any current speech
+    if ('speechSynthesis' in window) {
+      window.speechSynthesis.cancel();
+    }
+    muteButton.textContent = '🔊 Unmute';
+    muteButton.classList.add('muted');
+  } else {
+    muteButton.textContent = '🔇 Mute';
+    muteButton.classList.remove('muted');
+    
+    // If unmuting and on exercise screen, replay the current exercise instructions
+    const currentScreen = document.querySelector('.screen.active').id;
+    if (currentScreen === 'exercise-detail-screen' && currentExerciseIdx >= 0) {
+      const exercise = selectedExercises[currentExerciseIdx];
+      if (exercise) {
+        instructionsVoice(exercise.name);
+      }
+    }
+  }
 }
 
 // Body part selection from home screen
@@ -223,7 +253,7 @@ function moveToNext() {
 }
 
 function instructionsVoice(exerciseName) {
-  if (isPageUnloading) return;  // Don't start new speech if page is unloading
+  if (isPageUnloading || isMuted) return;  // Don't speak if muted or page is unloading
   
   if (!('speechSynthesis' in window)) {
     console.warn('Speech synthesis not supported');
